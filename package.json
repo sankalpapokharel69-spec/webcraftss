@@ -1,0 +1,17 @@
+{
+  "name": "webcraft-studio",
+  "version": "1.0.0",
+  "description": "WebCraft Studio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^13.0.3",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "google-auth-library": "^11.1.0"
+  }
+}
