@@ -1,0 +1,67 @@
+{
+  "nextProjectId": 7,
+  "nextMessageId": 1,
+  "projects": [
+    {
+      "id": 1,
+      "title": "Luxe Fashion Store",
+      "description": "A premium e-commerce experience with 3D product previews, seamless checkout and animated lookbooks.",
+      "category": "E-Commerce",
+      "technologies": "React, Node.js, Stripe, MongoDB",
+      "image": null,
+      "link": "#",
+      "created_at": "2026-09-29T03:56:07.201Z"
+    },
+    {
+      "id": 2,
+      "title": "Nova SaaS Dashboard",
+      "description": "Analytics platform with real-time charts, dark-mode glass UI and smooth micro-interactions.",
+      "category": "Development",
+      "technologies": "Vue.js, D3.js, Express, PostgreSQL",
+      "image": null,
+      "link": "#",
+      "created_at": "2026-09-29T03:56:07.201Z"
+    },
+    {
+      "id": 3,
+      "title": "Aurora Brand Identity",
+      "description": "Complete brand system - logo, motion graphics and a glowing award-winning landing page.",
+      "category": "Branding",
+      "technologies": "Figma, After Effects, WebGL",
+      "image": null,
+      "link": "#",
+      "created_at": "2026-09-29T03:56:07.201Z"
+    },
+    {
+      "id": 4,
+      "title": "Orbit Portfolio 3D",
+      "description": "An immersive 3D scroll portfolio with particle galaxy background and cinematic reveals.",
+      "category": "Web Design",
+      "technologies": "Three.js, GSAP, CSS3",
+      "image": null,
+      "link": "#",
+      "created_at": "2026-09-29T03:56:07.201Z"
+    },
+    {
+      "id": 5,
+      "title": "Foodies Delivery App",
+      "description": "Mobile-first ordering app with live tracking, playful animations and one-tap re-order.",
+      "category": "UI/UX",
+      "technologies": "Flutter, Figma, Firebase",
+      "image": null,
+      "link": "#",
+      "created_at": "2026-09-29T03:56:07.201Z"
+    },
+    {
+      "id": 6,
+      "title": "TechBlog Platform",
+      "description": "SEO-optimized publishing platform with rich-text editor and 100/100 Lighthouse score.",
+      "category": "Development",
+      "technologies": "Next.js, GraphQL, Tailwind",
+      "image": null,
+      "link": "#",
+      "created_at": "2026-09-29T03:56:07.201Z"
+    }
+  ],
+  "messages": []
+}
