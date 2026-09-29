@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebCraft Studio — Premium Web Design & Development</title>
+  <meta name="description" content="WebCraft Studio crafts premium, animated, high-performance websites that make brands unforgettable." />
+  <link rel="icon" href="logo.jpg" type="image/jpeg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════ PRELOADER ═══════════ -->
+  <div id="preloader">
+    <div class="pre-inner">
+      <div class="pre-cube">
+        <div class="face f1"></div><div class="face f2"></div>
+        <div class="face f3"></div><div class="face f4"></div>
+        <div class="face f5"></div><div class="face f6"></div>
+      </div>
+      <p class="pre-text">WebCraft <span>Studio</span></p>
+      <div class="pre-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ CUSTOM CURSOR ═══════════ -->
+  <div id="cursor"></div>
+  <div id="cursor-glow"></div>
+
+  <!-- ═══════════ ANIMATED BACKGROUND CANVAS ═══════════ -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-wrap">
+          <img src="logo.jpg" alt="WebCraft Studio" onerror="this.parentElement.classList.add('no-logo')" />
+          <span class="logo-fallback">W</span>
+        </span>
+        <span class="logo-text">WebCraft<span>Studio</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="inboxNavBtn" title="Inbox">
+          <i class="fa-solid fa-envelope"></i>
+        </button>
+        <button class="icon-btn" id="adminNavBtn" title="Admin">
+          <i class="fa-solid fa-lock"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+        <button id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <header id="hero">
+    <!-- Optional: drop hero-video.mp4 into /public and it plays automatically -->
+    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
+      <source src="hero-video.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="hero-cube">
+      <div class="face f1"></div><div class="face f2"></div>
+      <div class="face f3"></div><div class="face f4"></div>
+      <div class="face f5"></div><div class="face f6"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <i class="fa-solid fa-bolt"></i> Award-Winning Digital Studio
+      </div>
+      <h1 class="reveal">
+        We Craft <span class="gradient-text">Digital</span><br />
+        <span id="typing-text"></span><span class="type-cursor">|</span>
+      </h1>
+      <p class="hero-sub reveal">
+        Premium websites with cinematic 3D animations, glowing visuals and
+        buttery-smooth experiences — built to make your brand unforgettable.
+      </p>
+      <div class="hero-btns reveal">
+        <a href="#portfolio" class="btn btn-primary magnetic">
+          <i class="fa-solid fa-gem"></i> View Our Work
+        </a>
+        <a href="#contact" class="btn btn-ghost magnetic">
+          <i class="fa-solid fa-paper-plane"></i> Start a Project
+        </a>
+      </div>
+      <div class="hero-stats reveal">
+        <div><b data-counter="250">0</b><span>+ Projects</span></div>
+        <div><b data-counter="120">0</b><span>+ Happy Clients</span></div>
+        <div><b data-counter="15">0</b><span>+ Awards</span></div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator">
+      <span class="mouse"><span></span></span>
+      Scroll
+    </a>
+  </header>
+
+  <!-- ═══════════ MARQUEE ═══════════ -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Web Design <i class="fa-solid fa-star"></i></span>
+      <span>3D Animation <i class="fa-solid fa-star"></i></span>
+      <span>UI / UX <i class="fa-solid fa-star"></i></span>
+      <span>E-Commerce <i class="fa-solid fa-star"></i></span>
+      <span>Branding <i class="fa-solid fa-star"></i></span>
+      <span>SEO <i class="fa-solid fa-star"></i></span>
+      <span>Web Design <i class="fa-solid fa-star"></i></span>
+      <span>3D Animation <i class="fa-solid fa-star"></i></span>
+      <span>UI / UX <i class="fa-solid fa-star"></i></span>
+      <span>E-Commerce <i class="fa-solid fa-star"></i></span>
+      <span>Branding <i class="fa-solid fa-star"></i></span>
+      <span>SEO <i class="fa-solid fa-star"></i></span>
+    </div>
+  </div>
+
+  <!-- ═══════════ ABOUT ═══════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="about-card-3d tilt">
+            <div class="about-ring"></div>
+            <div class="about-ring ring-2"></div>
+            <div class="about-core">
+              <i class="fa-solid fa-code"></i>
+              <h3>Crafting Since 2015</h3>
+              <p>Design • Code • Motion</p>
+            </div>
+          </div>
+          <div class="float-chip chip-1"><i class="fa-solid fa-palette"></i> Pixel Perfect</div>
+          <div class="float-chip chip-2"><i class="fa-solid fa-cube"></i> 3D Experiences</div>
+          <div class="float-chip chip-3"><i class="fa-solid fa-wand-magic-sparkles"></i> Motion Magic</div>
+        </div>
+
+        <div class="about-text">
+          <span class="section-tag reveal">— About Us</span>
+          <h2 class="reveal">A Studio Obsessed With <span class="gradient-text">Perfection</span></h2>
+          <p class="reveal">
+            WebCraft Studio is a full-service digital agency blending premium design,
+            clean code and cinematic animation. Every pixel is intentional, every
+            transition is choreographed — because your brand deserves nothing less.
+          </p>
+          <ul class="about-list reveal">
+            <li><i class="fa-solid fa-circle-check"></i> Hand-crafted, conversion-focused design</li>
+            <li><i class="fa-solid fa-circle-check"></i> 3D &amp; WebGL visual effects that wow</li>
+            <li><i class="fa-solid fa-circle-check"></i> Lightning-fast performance on every device</li>
+            <li><i class="fa-solid fa-circle-check"></i> Lifetime support &amp; dedication</li>
+          </ul>
+          <div class="about-btns reveal">
+            <a href="#services" class="btn btn-primary magnetic">Our Services <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SERVICES ═══════════ -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag reveal">— What We Do</span>
+        <h2 class="reveal">Premium <span class="gradient-text">Services</span></h2>
+        <p class="reveal">Everything your brand needs to shine online.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card tilt reveal">
+          <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+          <h3>Web Design</h3>
+          <p>Stunning, modern layouts designed around your brand identity and your users.</p>
+          <span class="service-num">01</span>
+        </div>
+        <div class="service-card tilt reveal">
+          <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Development</h3>
+          <p>Clean, scalable code with the latest tech — fast, secure and SEO-ready.</p>
+          <span class="service-num">02</span>
+        </div>
+        <div class="service-card tilt reveal">
+          <div class="service-icon"><i class="fa-solid fa-cube"></i></div>
+          <h3>3D &amp; Animation</h3>
+          <p>WebGL scenes, scroll stories and micro-interactions that feel alive.</p>
+          <span class="service-num">03</span>
+        </div>
+        <div class="service-card tilt reveal">
+          <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+          <h3>E-Commerce</h3>
+          <p>High-converting stores with smooth checkout and beautiful product pages.</p>
+          <span class="service-num">04</span>
+        </div>
+        <div class="service-card tilt reveal">
+          <div class="service-icon"><i class="fa-solid fa-fingerprint"></i></div>
+          <h3>Branding</h3>
+          <p>Logos, identity systems and brand guidelines that make you unforgettable.</p>
+          <span class="service-num">05</span>
+        </div>
+        <div class="service-card tilt reveal">
+          <div class="service-icon"><i class="fa-solid fa-rocket"></i></div>
+          <h3>SEO &amp; Growth</h3>
+          <p>Technical SEO and speed optimization so customers actually find you.</p>
+          <span class="service-num">06</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PORTFOLIO ═══════════ -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag reveal">— Our Work</span>
+        <h2 class="reveal">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="reveal">Fresh work straight from our studio — managed live from the admin panel.</p>
+      </div>
+
+      <div class="filter-bar reveal" id="filterBar"></div>
+      <div class="portfolio-grid" id="portfolioGrid">
+        <div class="portfolio-loading"><div class="spinner"></div><p>Loading projects…</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ STATS ═══════════ -->
+  <section id="stats" class="section stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-box reveal"><i class="fa-solid fa-layer-group"></i><b data-counter="250">0</b><span>Projects Delivered</span></div>
+        <div class="stat-box reveal"><i class="fa-solid fa-heart"></i><b data-counter="120">0</b><span>Happy Clients</span></div>
+        <div class="stat-box reveal"><i class="fa-solid fa-trophy"></i><b data-counter="15">0</b><span>Awards Won</span></div>
+        <div class="stat-box reveal"><i class="fa-solid fa-clock"></i><b data-counter="10">0</b><span>Years Experience</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PROCESS ═══════════ -->
+  <section id="process" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag reveal">— How We Work</span>
+        <h2 class="reveal">Our <span class="gradient-text">Process</span></h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step reveal"><div class="step-dot">1</div><h3>Discover</h3><p>We learn your goals, audience and vision.</p></div>
+        <div class="process-step reveal"><div class="step-dot">2</div><h3>Design</h3><p>Premium concepts with motion previews.</p></div>
+        <div class="process-step reveal"><div class="step-dot">3</div><h3>Develop</h3><p>Clean code, 3D effects, pixel-perfect build.</p></div>
+        <div class="process-step reveal"><div class="step-dot">4</div><h3>Launch</h3><p>Tested, optimized and shipped worldwide.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TESTIMONIALS ═══════════ -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag reveal">— Testimonials</span>
+        <h2 class="reveal">Clients <span class="gradient-text">Love Us</span></h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card tilt reveal">
+          <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"WebCraft turned our outdated site into a 3D masterpiece. Conversions went up 240% in two months!"</p>
+          <div class="testi-author"><div class="testi-avatar">SK</div><div><b>Sarah Kim</b><span>CEO, Luxe Fashion</span></div></div>
+        </div>
+        <div class="testi-card tilt reveal">
+          <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"The smoothest, most beautiful website we've ever had. The animations feel like a movie. Worth every penny."</p>
+          <div class="testi-author"><div class="testi-avatar">MR</div><div><b>Marcus Reed</b><span>Founder, Nova SaaS</span></div></div>
+        </div>
+        <div class="testi-card tilt reveal">
+          <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"Fast, responsive, glowing with style. Our brand finally looks as premium as our product. Highly recommended!"</p>
+          <div class="testi-author"><div class="testi-avatar">AP</div><div><b>Aisha Patel</b><span>Director, Orbit Labs</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTACT ═══════════ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag reveal">— Get In Touch</span>
+        <h2 class="reveal">Start Your <span class="gradient-text">Project</span></h2>
+        <p class="reveal">Fill the form — your message lands directly in our studio inbox.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="info-card"><i class="fa-solid fa-envelope"></i><div><b>Email</b><span>hello@webcraftstudio.com</span></div></div>
+          <div class="info-card"><i class="fa-solid fa-phone"></i><div><b>Phone</b><span>+1 (555) 123-4567</span></div></div>
+          <div class="info-card"><i class="fa-solid fa-location-dot"></i><div><b>Location</b><span>Serving Clients Worldwide</span></div></div>
+          <div class="info-card"><i class="fa-solid fa-clock"></i><div><b>Response Time</b><span>Within 24 hours</span></div></div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="cName" placeholder="Your Name *" required />
+            </div>
+            <div class="form-group">
+              <input type="email" id="cEmail" placeholder="Your Email *" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="tel" id="cPhone" placeholder="Phone Number" />
+            </div>
+            <div class="form-group">
+              <input type="text" id="cSubject" placeholder="Subject" />
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea id="cMessage" rows="5" placeholder="Tell us about your project... *" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full magnetic" id="contactSubmit">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo">
+            <span class="logo-wrap">
+              <img src="logo.jpg" alt="WebCraft Studio" onerror="this.parentElement.classList.add('no-logo')" />
+              <span class="logo-fallback">W</span>
+            </span>
+            <span class="logo-text">WebCraft<span>Studio</span></span>
+          </a>
+          <p>Crafting premium digital experiences with 3D animation, glowing visuals and clean code.</p>
+          <div class="socials">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#about">About</a><a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a><a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="#services">Web Design</a><a href="#services">Development</a>
+          <a href="#services">3D Animation</a><a href="#services">Branding</a>
+        </div>
+        <div class="footer-col">
+          <h4>Studio Access</h4>
+          <a href="#" id="adminLink"><i class="fa-solid fa-lock"></i> Admin Panel</a>
+          <a href="#" id="inboxLink"><i class="fa-solid fa-envelope"></i> Message Inbox</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 WebCraft Studio. All rights reserved. Crafted with <i class="fa-solid fa-heart"></i> and pixels.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════ ADMIN MODAL ═══════════ -->
+  <div class="modal-backdrop" id="adminModal">
+    <div class="modal">
+      <button class="modal-close" data-close="adminModal"><i class="fa-solid fa-xmark"></i></button>
+
+      <!-- Login Gate -->
+      <div class="modal-view active" id="adminLoginView">
+        <div class="modal-head">
+          <div class="modal-icon"><i class="fa-solid fa-lock"></i></div>
+          <h3>Admin Access</h3>
+          <p>Enter the admin password to manage portfolio projects.</p>
+        </div>
+        <form id="adminLoginForm">
+          <div class="form-group pass-group">
+            <input type="password" id="adminPassword" placeholder="Enter admin password" autocomplete="off" required />
+            <button type="button" class="pass-toggle" data-target="adminPassword"><i class="fa-solid fa-eye"></i></button>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="adminLoginBtn">Unlock Panel <i class="fa-solid fa-unlock"></i></button>
+        </form>
+      </div>
+
+      <!-- Admin Dashboard -->
+      <div class="modal-view" id="adminDashView">
+        <div class="modal-head">
+          <div class="modal-icon"><i class="fa-solid fa-gauge-high"></i></div>
+          <h3>Admin Dashboard</h3>
+          <p>Add, edit or remove portfolio projects.</p>
+        </div>
+
+        <form id="projectForm" class="admin-form">
+          <input type="hidden" id="projectId" />
+          <div class="form-group">
+            <input type="text" id="pTitle" placeholder="Project Title *" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <select id="pCategory">
+                <option>Web Design</option><option>Development</option>
+                <option>E-Commerce</option><option>Branding</option>
+                <option>UI/UX</option><option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="text" id="pTech" placeholder="Tech: React, Node, CSS" />
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea id="pDesc" rows="3" placeholder="Project description..."></textarea>
+          </div>
+          <div class="form-group">
+            <input type="url" id="pLink" placeholder="Live link https://..." />
+          </div>
+          <div class="form-group">
+            <label class="file-label" for="pImage">
+              <i class="fa-solid fa-image"></i>
+              <span id="fileLabel">Upload project image (jpg/png/webp)</span>
+            </label>
+            <input type="file" id="pImage" accept="image/*" hidden />
+            <img id="imagePreview" class="image-preview" alt="" />
+          </div>
+          <div class="form-group">
+            <input type="url" id="pImageUrl" placeholder="…or paste an image URL instead" />
+          </div>
+          <div class="admin-btn-row">
+            <button type="submit" class="btn btn-primary" id="projectSubmitBtn"><i class="fa-solid fa-plus"></i> Add Project</button>
+            <button type="button" class="btn btn-ghost" id="resetFormBtn"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+          </div>
+        </form>
+
+        <div class="admin-list-head">
+          <h4><i class="fa-solid fa-layer-group"></i> Current Projects (<span id="projectCount">0</span>)</h4>
+        </div>
+        <div class="admin-list" id="adminProjectsList"></div>
+
+        <button class="btn btn-ghost btn-full" id="adminLogoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ INBOX MODAL ═══════════ -->
+  <div class="modal-backdrop" id="inboxModal">
+    <div class="modal">
+      <button class="modal-close" data-close="inboxModal"><i class="fa-solid fa-xmark"></i></button>
+
+      <!-- Login Gate -->
+      <div class="modal-view active" id="inboxLoginView">
+        <div class="modal-head">
+          <div class="modal-icon inbox"><i class="fa-solid fa-envelope"></i></div>
+          <h3>Message Inbox</h3>
+          <p>Enter the inbox password to view customer messages.</p>
+        </div>
+        <form id="inboxLoginForm">
+          <div class="form-group pass-group">
+            <input type="password" id="inboxPassword" placeholder="Enter inbox password" autocomplete="off" required />
+            <button type="button" class="pass-toggle" data-target="inboxPassword"><i class="fa-solid fa-eye"></i></button>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="inboxLoginBtn">Open Inbox <i class="fa-solid fa-inbox"></i></button>
+        </form>
+      </div>
+
+      <!-- Inbox View -->
+      <div class="modal-view" id="inboxDashView">
+        <div class="modal-head">
+          <div class="modal-icon inbox"><i class="fa-solid fa-inbox"></i></div>
+          <h3>Customer Messages</h3>
+          <p><span id="unreadCount">0</span> unread message(s)</p>
+        </div>
+        <div class="admin-list" id="inboxMessages"></div>
+        <button class="btn btn-ghost btn-full" id="inboxLogoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ TOASTS ═══════════ -->
+  <div id="toast-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
